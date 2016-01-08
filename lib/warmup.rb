@@ -33,7 +33,9 @@ class Warmup
   def calls_some_methods(string)
     loud_string = string.upcase!
     loud_string.reverse!
-    return "I am unrelated"
+    #return "I am unrelated"
+    puts "STRING #{loud_string}"
+    return loud_string
   end
 
  end

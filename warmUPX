@@ -1,0 +1,28 @@
+# Your code here
+
+require "warmup"
+
+describe "Warmup" do 
+
+  let( :this_warmup ) { Warmup.new }
+
+  it "allows input" do 
+    expect(this_warmup).to receive(:gets).and_return("check this")
+    expect(this_warmup).to receive(:puts).and_return("check this"
+    this_warmup.gets_shout
+    expect(this_warmup.gets_shout).to eq("CHECK THIS")
+  end
+
+  it "check_triple_size" do
+    triple_this = double("triple_array", :size => 5)
+    expect( this_warmup.size ).to eq(5)
+  end
+
+  it "check_triple_size_normal_1D" do
+    expect( this_warmup.[1,2,3,4].size ).to eq(12)
+  end
+  it "check_triple_size_normal_1D_nested" do
+    expect( this_warmup.[1,2,[4,5,6],7,8].size ).to eq(15)
+  end
+
+end    
